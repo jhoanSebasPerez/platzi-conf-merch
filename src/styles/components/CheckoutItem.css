@@ -1,0 +1,29 @@
+.Checkout-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 0 0;
+}
+.Checkout-element img {
+  width: 80px;
+}
+.Checkout-item .fas {
+  margin: 0 0 0 10px;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.Checkout-item button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.Checkout-element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+.Checkout-element h4 {
+  margin: 0;
+}
