@@ -16,6 +16,7 @@ import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 function App() {
   const globalState = useInitialState(initialState);
   const clientId = import.meta.env.VITE_CLIENT_ID_PAYPAL;
+  console.log(clientId);
 
   return (
     <>
