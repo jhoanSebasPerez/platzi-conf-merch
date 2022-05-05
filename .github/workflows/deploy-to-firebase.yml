@@ -38,9 +38,3 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-  showEnv:
-    name: Show env var
-    runs-on: ubuntu-latest
-    steps:
-      - name: Show client id Paypal
-        run: echo "$VITE_CLIENT_ID_PAYPAL"
