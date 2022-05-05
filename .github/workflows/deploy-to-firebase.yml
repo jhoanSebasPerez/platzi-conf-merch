@@ -43,4 +43,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show client id Paypal
-        run: echo "$secrets.VITE_CLIENT_ID_PAYPAL"
+        run: echo "$VITE_CLIENT_ID_PAYPAL"
