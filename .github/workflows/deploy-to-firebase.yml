@@ -37,3 +37,9 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           VITE_API_KEY_POSITION: ${{secrets.VITE_API_KEY_POSITION}}
           VITE_CLIENT_ID_PAYPAL: ${{secrets.VITE_CLIENT_ID_PAYPAL}}
+  showEnv:
+    name: Show env var
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show client id Paypal
+        run: echo "$VITE_CLIENT_ID_PAYPAL"
