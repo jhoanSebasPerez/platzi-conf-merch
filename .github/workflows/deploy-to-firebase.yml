@@ -12,6 +12,9 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+        env:
+          VITE_API_KEY_POSITION: ${{secrets.VITE_API_KEY_POSITION}}
+          VITE_CLIENT_ID_PAYPAL: ${{secrets.VITE_CLIENT_ID_PAYPAL}}
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
@@ -35,11 +38,9 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          VITE_API_KEY_POSITION: ${{secrets.VITE_API_KEY_POSITION}}
-          VITE_CLIENT_ID_PAYPAL: ${{secrets.VITE_CLIENT_ID_PAYPAL}}
   showEnv:
     name: Show env var
     runs-on: ubuntu-latest
     steps:
       - name: Show client id Paypal
-        run: echo "$VITE_CLIENT_ID_PAYPAL"
+        run: echo "$secrets.VITE_CLIENT_ID_PAYPAL"
